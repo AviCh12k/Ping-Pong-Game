@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="player_panel_0" class="active">
+            <h1 id="name_0" class="name">Player 1</h1>
+            <div id="global_score_0" class="global_score">1</div>
+            <div id="curr_score_0" class="curr_score"></div>
+        </div>
+        <div id="player_panel_1">
+            <h1 id="name_1" class="name">Player 2</h1>
+            <div id="global_score_1" class="global_score"></div>
+            <div id="curr_score_1" class="curr_score"></div>
+        </div>
+        <div id="random"></div>
+        <button id="new" onclick="init()">NEW GAME</button>
+        <button id="roll" onclick="roll()">ROLL</button>
+        <button id="hold" onclick="hold()">HOLD</button>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

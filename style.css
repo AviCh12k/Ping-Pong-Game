@@ -1,0 +1,204 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+body{
+    background-image: url("maria-chernyh-784624-unsplash.jpg");
+    background-size: 100vw;
+}
+.container{
+    position: relative;
+    margin: 100px auto;
+    width: 800px;
+    height: 500px;
+    background-image: linear-gradient(to bottom, rgb(20, 27, 20),transparent);
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#new, #hold, #roll, #random{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#player_panel_0, #player_panel_1{
+    text-align: center;
+}
+#name_0, #name_1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 70px;
+    color: rgb(255, 255, 255);
+}
+#global_score_0, #global_score_1{
+    background-color: rgb(252, 150, 26);
+    font-size: 60px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: rgb(68, 67, 67);
+    
+}
+#curr_score_0,#curr_score_1 {
+    background-color: rgb(243, 200, 147);
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 60px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: rgb(68, 67, 67);
+}
+#new{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-weight: lighter;
+    padding: 15px;
+    font-size: 25px;
+    border-style: none;
+    background-color: black;
+    cursor: pointer;
+    box-shadow: 0 0 10px cadetblue;
+}
+#random{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(32, 32, 32);
+    top: 45%;
+    color: white;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block;
+}
+#roll{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 5px 10px;
+    top: 70%;
+    border: none;
+    outline-style: none;
+    background-color: rgb(0, 247, 255);
+    cursor: pointer;
+}
+#hold{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 5px 10px;
+    top: 80%;
+    border: none;
+    outline-style: none;
+    background-color: rgb(0, 247, 255);
+    cursor: pointer;
+}
+#roll:hover, #hold:hover{
+    background-color: rgb(6, 2, 70);  
+    color: rgb(255, 255, 255);  
+}
+.active{
+    background-image: linear-gradient(to bottom,rgb(0, 217, 255), rgb(0, 255, 128), transparent)
+}
+.active #name_0{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 70px;
+    color: rgb(0, 0, 0);
+}
+.active #name_1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 70px;
+    color: rgb(0, 0, 0);
+}
+.active #global_score_0{
+    background-color: rgb(247, 139, 8);
+    font-size: 60px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 2px inset black;
+}
+.active #global_score_1{
+    background-color: rgb(247, 139, 8);
+    font-size: 60px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 2px inset black;
+}
+.active #curr_score_0{
+    background-color: rgb(255, 203, 140);
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 60px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(41, 40, 40);
+}
+.active #curr_score_1{
+    background-color: rgb(255, 203, 140);
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 60px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(41, 40, 40);
+}
+.winner{
+    background-image: linear-gradient(to bottom, red, transparent);
+}
+.winner #name_0{
+    color: rgb(251, 255, 0);
+}
+.winner #name_1{
+    color: rgb(251, 255, 0);
+}
+/* .winner .global_score{
+    background-color: rgb(247, 139, 8);
+    font-size: 60px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+}
+.winner .curr_score{
+    background-color: rgb(255, 203, 140);
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 60px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(41, 40, 40);
+} */
